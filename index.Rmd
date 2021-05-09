@@ -19,6 +19,7 @@ output:
            <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
            </div>
          </div>
+    seal: false 
 ---
 
 ```{r setup, include=FALSE}
@@ -260,30 +261,41 @@ knitr::include_graphics("img/map.png")
 
 ---
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, out.width = "105%", out.height= "100%", fig.align='center'}
 
-htmltools::includeHTML("D:/google_drive/01_postdoc/08_review/scripts/data/img/espraia.html")
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height="100%", out.width="105%"}
+library(plotly)
+load("D:/google_drive/01_postdoc/08_review/scripts/data/img/espraia.rda")
+espraia
+```
+
+---
+
+
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height="100%", out.width="105%"}
+library(plotly)
+load("D:/google_drive/01_postdoc/08_review/scripts/data/img/diff_quad1.rda")
+fig_quad1
+```
+
+
+---
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height="100%", out.width="100%"}
+library(plotly)
+load("D:/google_drive/01_postdoc/08_review/scripts/data/img/quad2.rda")
+figb
+
 ```
 
 ---
 
 ```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height="100%", out.width="105%"}
-htmltools::includeHTML("D:/google_drive/01_postdoc/08_review/scripts/data/img/fig_quad1.html")
+library(plotly)
+load("D:/google_drive/01_postdoc/08_review/scripts/data/img/diff_quad2.rda")
+figc
 ```
-
 ---
 
-```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height="100%", out.width="100%"}
-htmltools::includeHTML("D:/google_drive/01_postdoc/08_review/scripts/data/img/quad2.html")
-```
-
----
-
-```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, out.height="100%", out.width="100%"}
-htmltools::includeHTML("D:/google_drive/01_postdoc/08_review/scripts/data/img/diff_pop.html")
-```
-
----
 
 # Results
 
@@ -347,6 +359,8 @@ Metropolitan areas for comparison
 ]
 ]
 
+---
+
 # Research contributions
 
 
@@ -392,5 +406,5 @@ class: right, middle, inverse
 [`r fa(name = "link")` retaoliveira.github.io/places](https://retaoliveira.github.io/places)  
 [`r fa(name = "paper-plane")` renataoliveira@cefetmg.br](mailto:renataoliveira@cefetmg.br)
 
----
+
 
