@@ -19,9 +19,6 @@ output:
            <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
            </div>
          </div>
-    seal: false 
-    includes:
-      in_header: header.html
 ---
 
 ```{r setup, include=FALSE}
@@ -311,11 +308,6 @@ knitr::include_graphics("img/cluster_plot.png")
 # Results
 
 Metropolitan areas for comparison
-
-```{r include=FALSE}
-quad1 <- read_csv("D:/google_drive/01_postdoc/08_review/scripts/data/data/quad1.csv")
-
-```
 
 .pull-left[
 .small[
