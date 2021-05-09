@@ -1,0 +1,113 @@
+---
+title: "Untitled"
+author: "Renata Oliveira"
+date: "23/03/2021"
+output: html_document
+---
+
+```{r}
+worldMaps <- function(df, world_data, data_type, period, indicator){
+  
+  # Function for setting the aesthetics of the plot
+  my_theme <- function () { 
+    theme_bw() + theme(axis.text = element_text(size = 14),
+                       axis.title = element_text(size = 14),
+                       strip.text = element_text(size = 14),
+                       panel.grid.major = element_blank(), 
+                       panel.grid.minor = element_blank(),
+                       panel.background = element_blank(), 
+                       legend.position = "bottom",
+                       panel.border = element_blank(), 
+                       strip.background = element_rect(fill = 'white', colour = 'white'))
+  }
+  
+  # Select only the data that the user has selected to view
+  plotdf <- df[df$Indicator == indicator & df$DataType == data_type & df$Period == period,]
+  plotdf <- plotdf[!is.na(plotdf$ISO3), ]
+  
+  # Add the data the user wants to see to the geographical world data
+  world_data['DataType'] <- rep(data_type, nrow(world_data))
+  world_data['Period'] <- rep(period, nrow(world_data))
+  world_data['Indicator'] <- rep(indicator, nrow(world_data))
+  world_data['Value'] <- plotdf$Value[match(world_data$ISO3, plotdf$ISO3)]
+  
+  # Create caption with the data source to show underneath the map
+  capt <- paste0("Source: ", ifelse(data_type == "Childlessness", "United Nations" , "World Bank"))
+  
+  # Specify the plot for the world map
+  library(RColorBrewer)
+  library(ggiraph)
+  g <- ggplot() + 
+    geom_polygon_interactive(data = world_data, color = 'gray70', size = 0.1,
+                                    aes(x = long, y = lat, fill = Value, group = group, 
+                                        tooltip = sprintf("%s<br>%s", ISO3, Value))) + 
+    scale_fill_gradientn(colours = brewer.pal(5, "RdBu"), na.value = 'white') + 
+    scale_y_continuous(limits = c(-60, 90), breaks = c()) + 
+    scale_x_continuous(breaks = c()) + 
+    labs(fill = data_type, color = data_type, title = NULL, x = NULL, y = NULL, caption = capt) + 
+    my_theme()
+  
+  return(g)
+}
+```
+
+
+```{r}
+library(maps)
+library(ggplot2)
+library(tmap)    # for static and interactive maps
+library(leaflet) # for interactive maps
+library(mapview) # for interactive maps
+library(ggplot2) # tidyverse vis package
+library(shiny)   # for web applications
+library(sf)
+library(raster)
+library(dplyr)
+library(spData)
+world_data <- ggplot2::map_data('world')
+
+tm_shape(world) + tm_polygons()
+
+library(leaflet)
+leaflet() %>% addTiles() %>% setView(-93.65, 42.0285, zoom = 1)
+```
+
+```{r}
+pal = colorNumeric("RdYlBu", domain = cycle_hire$nbikes)
+
+leaflet(data = cycle_hire) %>% 
+  addProviderTiles(providers$Stamen.TonerLite) %>% 
+  addCircles(col = ~pal(nbikes), opacity = 0.9) %>% 
+  addPolygons(data = lnd, fill = FALSE) %>% 
+  addLegend(pal = pal, values = ~nbikes) %>% 
+  setView(lng = -0.1, 51.5, zoom = 12) %>% 
+  addMiniMap()
+
+
+# Library
+library(leaflet)
+
+library(rgdal)
+world_spdf <- readOGR( 
+  dsn= paste0(getwd(),"/DATA/world_shape_file/") , 
+  layer="TM_WORLD_BORDERS_SIMPL-0.3",
+  verbose=FALSE
+)
+
+# Create a color palette for the map:
+mypalette <- colorNumeric( palette="viridis", domain=world_spdf@data$POP2005, na.color="transparent")
+mypalette(c(45,43))
+
+# Basic choropleth with leaflet?
+m <- leaflet(world_spdf) %>% 
+  addTiles()  %>% 
+  setView( lat=10, lng=0 , zoom=2) %>%
+  addPolygons( fillColor = ~mypalette(POP2005), stroke=FALSE )
+
+m
+
+
+```
+
+
+

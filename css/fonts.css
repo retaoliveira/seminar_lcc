@@ -1,0 +1,109 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Muli:600,700,800);
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Upright:700');
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Fira+Mono|Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:300, 300i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=DM+Mono&display=swap');
+
+
+/* Turn off slide numbers */
+/* Don't want them on videos! */
+.remark-slide-number {
+  position: inherit;
+}
+
+.remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: #E9AFA3;
+}
+
+/* Margins around headers */
+/* To make the most of the slide real estate */
+
+h1, h2, h3 {
+  margin-top: 5px;
+  margin-bottom: 3px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+
+
+body {
+  font-family: 'Lato', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
+  color: #5d5b5b;
+  text-align: justify;
+}
+
+h1 {
+  font-family: 'Muli';
+  font-weight: 1000;
+  color: #62ab93;
+  font-size: 2.5em;
+
+}
+
+h2, h3 {
+  font-family: 'Muli';
+  font-weight: 600;
+  color: #fc6f5c;
+  font-size: 0.5em;
+
+}
+
+.inverse h1 {
+  font-family: 'Muli';
+  font-weight: 800;
+  font-size: 2.5em;
+}
+
+.remark-code, .remark-inline-code {
+  font-family: 'Inconsolata', 'Lucida Console', Monaco, monospace;
+}
+
+.fancy{
+  font-family: 'Cormorant Upright', serif;
+  font-weight: 700;
+}
+
+/* for mermaid */
+
+.DiagrammeR g .label {
+  font-family: 'Lato';
+  font-size: 14px;
+  color: rgb(51, 51, 51);
+}
+
+/* Font sizes */
+.huge {
+  font-family: "Libre Baskerville";
+  font-size: 100%;
+  font-weight: bold;
+}
+.larger { font-size: 250% }
+.large { font-size: 120% }
+.midi { font-size: 85% }
+.small { font-size: 70% }
+.xsmall { font-size: 65% }
+.tiny { font-size: 50% }
+
+.midi .remark-code { font-size: 85%; }
+.small .remark-code { font-size: 70%; }
+.xsmall .remark-code { font-size: 65%; }
+.tiny .remark-code { font-size: 50%; }
