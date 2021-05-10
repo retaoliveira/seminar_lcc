@@ -363,6 +363,22 @@ Metropolitan areas for comparison - **To be reviewed from cluster analysis**
 ]
 
 ---
+# Examples of the representation
+
+.pull-left[
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="120%", fig.align='center'}
+knitr::include_graphics("img/paris.png")
+```
+]
+
+.pull-right[
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="120%", fig.align='center'}
+knitr::include_graphics("img/ny.png")
+```
+]
+
+
+---
 
 # Futher steps
 
