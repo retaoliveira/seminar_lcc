@@ -318,9 +318,7 @@ knitr::include_graphics("img/cluster_plot.png")
 ---
 
 # Results
-**To be reviewed from cluster analysis**
-
-Metropolitan areas for comparison
+Metropolitan areas for comparison - **To be reviewed from cluster analysis**
 
 .pull-left[
 .small[
