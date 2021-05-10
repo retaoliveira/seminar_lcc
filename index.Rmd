@@ -50,7 +50,7 @@ Relationships among urban characteristics, real estate market and spatial patter
 ]
 
 .beige[
-Renata Oliveira | Metting | 10/05/2021
+Renata Oliveira | Splott/UGE seminar | 10/05/2021
 ]
 
 
@@ -73,7 +73,8 @@ Renata Oliveira under supervision of Laetitia Dablanc and Matthieu Schorung
 
 ---
 
-# Research hypotheses
+# Research Hypothesis
+(Dablanc, L., 2019)
 .large[
 **Logistics sprawl is higher** in cities with a **high differential** between **central and suburban land/rent values**.
 ]
@@ -89,17 +90,20 @@ The **location of warehouses** is closely related to **land/rent values** of log
 
 ---
 
-background-image: url(img/log3.jpg)
-background-size: cover
 
 # Objectives
 
-.pull-left[
-.left[
-**Compare worldwide metropolitan regions considering the relationships among urban attributes, logistics real estate, and logistics facilities' spatial structure focusing on logistics sprawl.**
 
-]
-]
+
+**Chair Logistics City Theme 1 objective: **Compare spatial patterns of warehouses overtime and in different cities around the world connecting urban form to the evolution in the number and location of logistics facilities**
+(Dablanc, L., Palacios, L., 2019)
+
+<hr>
+--
+
+
+Focus of this research: Identify **the relationships between urban attributes, logistics real estate, and logistics facilities' spatial structure focusing on logistics sprawl**
+
 
 ---
 
@@ -215,12 +219,12 @@ knitr::include_graphics("img/mermaid2.png")
 -	UCI for urban activity index
 -	UCI for warehouse location
 - Price differential for central and suburban warehouses
--	Population (t0 and t1)
--	Metropolitan territorial area
--	Number of municipalities
--	Number of warehouses (t0 and t1)
--	Average distance to barycenter (t0 and t1)
--	Yearly logistics sprawl
+-	Population (t0 and t1) (Dablanc, L; Palacios, L., 2019)
+-	Metropolitan territorial area (Dablanc, L; Palacios, L., 2019)
+-	Number of municipalities (Dablanc, L; Palacios, L., 2019)
+-	Number of warehouses (t0 and t1) (Dablanc, L; Palacios, L., 2019)
+-	Average distance to barycenter (t0 and t1) (Dablanc, L; Palacios, L., 2019)
+-	Yearly logistics sprawl (Dablanc, L; Palacios, L., 2019)
 -	The proportion of HH, HL, LH and LL clusters for the urban activity index, warehouse location and warehouse price.
 ]
 
