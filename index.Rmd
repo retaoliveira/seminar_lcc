@@ -360,6 +360,16 @@ Metropolitan areas for comparison - **To be reviewed from cluster analysis**
 
 ---
 
+# Futher steps
+
+- Conclude classification of metropolitan areas
+- Compare different classes of metropolitan areas - sprawl x urban attributes
+- Dashboard
+- Paper
+
+
+---
+
 # Research contributions
 
 
