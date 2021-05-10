@@ -364,6 +364,7 @@ Metropolitan areas for comparison - **To be reviewed from cluster analysis**
 
 ---
 # Examples of the representation
+Referential for the urban classification
 
 .pull-left[
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="120%", fig.align='center'}
@@ -383,7 +384,7 @@ knitr::include_graphics("img/ny.png")
 # Futher steps
 
 - Conclude classification of metropolitan areas
-- Compare different classes of metropolitan areas - sprawl x urban attributes
+- Compare different classes of metropolitan areas - sprawl x urban attributes - **scale regarding the comparison between European and North American metros**
 - [Dashboard](https://geodatascience.shinyapps.io/logistics_city_chair/)
 - Paper
 
