@@ -297,7 +297,7 @@ figc
 ---
 
 
-# Results
+# Results - to be reviewed
 
 .pull-left-narrow[
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="120%", fig.align='center'}
@@ -318,6 +318,7 @@ knitr::include_graphics("img/cluster_plot.png")
 ---
 
 # Results
+**To be reviewed from cluster analysis**
 
 Metropolitan areas for comparison
 
