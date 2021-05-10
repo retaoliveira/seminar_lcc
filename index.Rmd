@@ -364,7 +364,7 @@ Metropolitan areas for comparison - **To be reviewed from cluster analysis**
 
 - Conclude classification of metropolitan areas
 - Compare different classes of metropolitan areas - sprawl x urban attributes
-- Dashboard
+- [Dashboard](https://geodatascience.shinyapps.io/logistics_city_chair/)
 - Paper
 
 
